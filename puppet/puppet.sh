@@ -6,6 +6,7 @@ dpkg -i puppetlabs-release-pc1-jessie.deb
 apt-get update
 apt-get install puppet-agent
 apt-get install puppetserver
+export PATH=$PATH:/opt/puppetlabs/bin/
 puppet resource package puppetdb-termini ensure=latest
 apt-get install puppetdb
 service puppetserver stop
