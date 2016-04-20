@@ -16,3 +16,8 @@ echo "storeconfigs = true
 storeconfigs_backend = puppetdb
 reports = store,puppetdb
 autosign=true >> /etc/puppetlabs/puppet/puppet.conf"
+echo "—
+master:
+    facts:
+    terminus: puppetdb
+    cache: yaml" >> /etc/puppetlabs/puppet/routes.yaml
